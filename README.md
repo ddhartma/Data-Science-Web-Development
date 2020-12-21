@@ -35,7 +35,16 @@ Copy and paste the following code section into an index.html file and open the f
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>ADD ROWS AND COLUMNS HERE</h1>
+    <!-- row 1 -->
+    <div class="row">
+      <div class="col-1">C1</div>
+    </div>
+
+    <!-- row 2 -->
+    <div class="row">
+      <div class="col-1">C1</div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -47,12 +56,40 @@ Copy and paste the following code section into an index.html file and open the f
 ```
 The important thing here already
 - that the screen is divided in
-  - 12 columns
+  - 12 columns ()
   - as many columns as you need
 - Behind the scene CSS is used to make the layout
 - Just define (use special predefined) IDs and classes
 
+#### Adding a row with 12 column C1...C12
+```
+<div class="row">
+    <div class="col-1">C1</div>
+    <div class="col-1">C2</div>
+    <div class="col-1">C3</div>
+    <div class="col-1">C4</div>
+    <div class="col-1">C5</div>
+    <div class="col-1">C6</div>
+    <div class="col-1">C7</div>
+    <div class="col-1">C8</div>
+    <div class="col-1">C9</div>
+    <div class="col-1">C10</div>
+    <div class="col-1">C11</div>
+    <div class="col-1">C12</div>
+</div>
+```
+#### Adding one row with 2 columns (one column with 4 spaces an columns with 8 spaces)
+```
+<div class="row">
+    <div class="col-4">C1</div>
+    <div class="col-8">C2</div>
+</div>
+```
+
 ## Add a navigation bar
+```
+
+```
 
 ## Integrate Plotly plots
 
