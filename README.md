@@ -1,3 +1,5 @@
+[image1]: web_layout.png "web_layout"
+[image2]: navbar.png "navbar"
 # Data Science Web Development
 
 ## Why do you need web development as a data scientist?
@@ -35,7 +37,14 @@ Copy and paste the following code section into an index.html file and open the f
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>ADD ROWS AND COLUMNS HERE</h1>
+    <h1>Let's build a Data Science Web App</h1>
+
+    <!-- navbar -->
+    <nav ...>
+    ...
+    </nav>
+
+    <!-- rows and columns -->
     <!-- row 1 -->
     <div class="row">
       <div class="col-1">C1</div>
@@ -78,6 +87,7 @@ The important thing here already
     <div class="col-1">C12</div>
 </div>
 ```
+
 #### Adding one row with 2 columns (one column with 4 spaces an columns with 8 spaces)
 ```
 <div class="row">
@@ -85,11 +95,136 @@ The important thing here already
     <div class="col-8">C2</div>
 </div>
 ```
+#### Create an example with
+- col-1 (1 space - left column with github, linkedin)
+- col-11 (11 space - for two rows and two columns for 4 Plotly plots)
 
-## Add a navigation bar
+```
+<!--middle section-->
+<div class="row">
+
+    <!--social media buttons column-->
+    <div class="col-1 border-right">
+        <div id="follow-me" class="mt-3">
+            <a href="#">
+                <img src="../static/img/linkedinlogo.png" alt="linkedin" class="img-fluid mb-4 ml-2">
+            </a>
+            <a href="#">
+                <img src="../static/img/githublogo.png" alt="github" class="img-fluid ml-2">
+            </a>
+        </div>
+    </div>
+
+    <!--visualizations column-->
+    <div class="col-11">
+
+        <!--chart descriptions-->
+        <div id="middle-info" class="mt-3">
+
+            <h2 id="tag-line">World Bank Data Dashboard</h2>
+            <h4 id="tag-line" class="text-muted">Top 10 World Economies Land Use</h4>
+
+        </div>
+
+        <!--Plotly charts-->
+        <div id="charts" class="container mt-3 text-center">
+
+            <!--top two charts-->
+            <div class="row">
+                <div class="col-6">
+                    <div id="{{ids[0]}}"></div>
+                </div>
+                <div class="col-6">
+                    <div id="{{ids[1]}}"></div>
+                </div>
+            </div>
+
+            <!--bottom two charts-->
+            <div class="row mb-6">
+                <div class="col-6">
+                    <div id="chart3">
+                        <div id="{{ids[2]}}"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div id="chart4">
+                        <div id="{{ids[3]}}"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Create another row and place a fifth chart in that row-->
+            <div class="row mb-6">
+              <div class="col-12">
+                <div id="chart5">
+                    <div id="{{ids[4]}}"></div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+    <div>
+</div>
+```
+- to add a border for the follow me images add ```<div class="col-1 border-right">```
+- add margin-top of 3px via ```<div class=mt-3>```
+- add margin-left of 2px via ```<div class=ml-2>```
+- add margin-bottom of 4px via ```<div class=mb-4>```
+- use ```class="img-fluid"``` to enlarge and shrink images automatically depending on screen size
+- use ```class="text-muted"``` to change text color to gray
+
+#### Image of the web Layout
+
+![web_layout][image1]
+
+## Add a navigation bar (example)
+```
+<!--navbar links-->     
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+   <a class="navbar-brand" href="#">World Bank Dashboard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+  data-target="#navbarTogglerDemo02"
+  aria-controls="navbarTogglerDemo02" aria-expanded="false"
+  aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.udacity.com">Udacity</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://data.worldbank.org/">World Bank Data</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 ```
 
+#### Style color of navbar
 ```
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+```
+  - navbar-dark (or e.g. navbar-light)
+  - bg-dark (or e.g. bg-light)
+
+#### Add navbar items via
+
+```
+<li class="nav-item">
+    <a class="nav-link" href="https://www.udacity.com">Udacity</a>
+</li>
+```
+
+#### Align the navbar to the right screen side
+```
+<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+```
+use ml-auto to auto align the navbar to the right side
+
+#### Image of the navbar
+![navbar][image2]
 
 ## Integrate Plotly plots
 
