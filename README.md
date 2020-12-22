@@ -21,6 +21,12 @@ Here are some great Bootstrap links to get started:
 - [Navigation Bars](https://getbootstrap.com/docs/4.0/components/navbar/)
 - [Font Colors](https://getbootstrap.com/docs/4.0/utilities/colors/)  
 
+
+## The two project folders in this repo:
+There are two project folders in this Project
+- web_app: This folder contains all files as described below
+- web_app_empty_template: Is a completely empty template for own developments
+
 ## The starter Template
 Copy and paste the following code section into an index.html file and open the file in a browser.
 ```
