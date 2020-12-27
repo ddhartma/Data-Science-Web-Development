@@ -3,48 +3,38 @@
 # Data Science Web Development
 
 Let's create an interactive Data Science Dashboard.
-1. [Why do you need web development as a data scientist?](#Why_do_youn_need_web_development_as_a_data_scientist?)
-2. [Bootstrap - Let's do the web development for you](#Bootstrap)
-3. [The two project folders in this repo](#The_two_project_folders_in_this_repo)
-4. [The Bootstrap starter Template](#The_starter_Template)
+1. [***Why do you need web development as a data scientist?***](#Why_do_you_need_web_development_as_a_data_scientist)
+2. [***Bootstrap - Let's do the web development for you***](#Bootstrap)
+3. [***The two project folders in this repo***](#The_two_project_folders_in_this_repo)
+4. [***The Bootstrap starter Template***](#The_starter_Template)
   - [Adding a row with 12 column C1...C12 ](#Adding_a_row_with_12_column)
   - [Adding one row with 2 columns](#Adding_a_row_with_2_columns)
   - [Create an example](#Create_an_example)
   - [Image of the web Layout](#Image_of_the_web_Layout)
-
-
-5. [Add a navigation bar](#Add_a_navigation_bar)
+5. [***Add a navigation bar***](#Add_a_navigation_bar)
   - [Style color of navbar](#Style_color_of_navbar)
   - [Add navbar item](#Add_navbar_items)
   - [Align the navbar](#Align_the_navbar)
   - [Image of the navbar](#Image_of_the_navbar)
-
-
-6. [How to use jQuery](#How_to_use_jQuery)
-7. [Integrate Plotly plots](#Integrate_Plotly_plots)
+6. [***How to use jQuery***](#How_to_use_jQuery)
+7. [***Integrate Plotly plots***](#Integrate_Plotly_plots)
   - [How to use it?](#How_to_use_it)
   - [Other options](#Other_options)
-
-
-8. [Flask](#Flask)
+8. [***Flask***](#Flask)
   - [File top start the web app - worldbank.py file](#File_top_start)
   - [The worldbankapp folder](#The_worldbankapp_folder)
   - [Create a new page](#Create_a_new_page)
   - [Start the server](#start_the_server)
-
-
-9. [How does Panda, Plotly, Flask and HTML work together?](#work_together)
-  -[Plotly installation](#Plotly_installation)
+9. [***How does Panda, Plotly, Flask and HTML work together?***](#work_together)
+  - [Plotly installation](#Plotly_installation)
   - [wrangle_data.py](#wrangle_data)
   - [routes.py](#routes)
   - [index.html](#index)
-
-
-10. [Setup Instructions](#Setup_Instructions)
+10. [***Setup Instructions***](#Setup_Instructions)
   - [Prerequisites](#Prerequisites)
   - [Clone the project](#Clone_the_project)
 
-## Why do you need web development as a data scientist? <a name="Why_do_youn_need_web_development_as_a_data_scientist"></a>
+## Why do you need web development as a data scientist? <a name="Why_do_you_need_web_development_as_a_data_scientist"></a>
 There are already good tools for data visualizing such as matplotlib, seaborn, or Tableau. However, there are cases where these tools are not sufficient enough.
 
 For example, consider a project where you build a model that classifies disaster relief messages into categories. With your web development skills, you could turn that model into a web app where you would input a message and display the resulting message category.
