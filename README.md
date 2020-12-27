@@ -2,14 +2,54 @@
 [image2]: navbar.png "navbar"
 # Data Science Web Development
 
-Let`s create an interactive Data Science Dashboard.
+Let's create an interactive Data Science Dashboard.
+1. [Why do you need web development as a data scientist?](#Why_do_youn_need_web_development_as_a_data_scientist?)
+2. [Bootstrap - Let's do the web development for you](#Bootstrap)
+3. [The two project folders in this repo](#The_two_project_folders_in_this_repo)
+4. [The Bootstrap starter Template](#The_starter_Template)
+  - [Adding a row with 12 column C1...C12 ](#Adding_a_row_with_12_column)
+  - [Adding one row with 2 columns](#Adding_a_row_with_2_columns)
+  - [Create an example](#Create_an_example)
+  - [Image of the web Layout](#Image_of_the_web_Layout)
 
-## Why do you need web development as a data scientist?
+
+5. [Add a navigation bar](#Add_a_navigation_bar)
+  - [Style color of navbar](#Style_color_of_navbar)
+  - [Add navbar item](#Add_navbar_items)
+  - [Align the navbar](#Align_the_navbar)
+  - [Image of the navbar](#Image_of_the_navbar)
+
+
+6. [How to use jQuery](#How_to_use_jQuery)
+7. [Integrate Plotly plots](#Integrate_Plotly_plots)
+  - [How to use it?](#How_to_use_it)
+  - [Other options](#Other_options)
+
+
+8. [Flask](#Flask)
+  - [File top start the web app - worldbank.py file](#File_top_start)
+  - [The worldbankapp folder](#The_worldbankapp_folder)
+  - [Create a new page](#Create_a_new_page)
+  - [Start the server](#start_the_server)
+
+
+9. [How does Panda, Plotly, Flask and HTML work together?](#work_together)
+  -[Plotly installation](#Plotly_installation)
+  - [wrangle_data.py](#wrangle_data)
+  - [routes.py](#routes)
+  - [index.html](#index)
+
+
+10. [Setup Instructions](#Setup_Instructions)
+  - [Prerequisites](#Prerequisites)
+  - [Clone the project](#Clone_the_project)
+
+## Why do you need web development as a data scientist? <a name="Why_do_youn_need_web_development_as_a_data_scientist"></a>
 There are already good tools for data visualizing such as matplotlib, seaborn, or Tableau. However, there are cases where these tools are not sufficient enough.
 
 For example, consider a project where you build a model that classifies disaster relief messages into categories. With your web development skills, you could turn that model into a web app where you would input a message and display the resulting message category.
 
-## Bootstrap - Let's do the web development for you
+## Bootstrap - Let's do the web development for you <a name="Bootstrap"></a>
 Fortunately, if you are not used to web development there are great starter kits like Bootstrap. This is a easy to use front-end framework. Especially, CSS coding is simplified.
 
 Here are some great Bootstrap links to get started:
@@ -22,12 +62,12 @@ Here are some great Bootstrap links to get started:
 - [Font Colors](https://getbootstrap.com/docs/4.0/utilities/colors/)  
 
 
-## The two project folders in this repo:
+## The two project folders in this repo <a name="The_two_project_folders_in_this_repo"></a>
 There are two project folders in this Project
 - web_app: This folder contains all files as described below
 - web_app_empty_template: Is a completely empty template for own developments
 
-## The starter Template
+## The Bootstrap starter Template <a name="The_starter_Template"></a>
 Copy and paste the following code section into an index.html file and open the file in a browser.
 ```
 <!doctype html>
@@ -78,7 +118,7 @@ The important thing here already
 - Behind the scene CSS is used to make the layout
 - Just define (use special predefined) IDs and classes
 
-#### Adding a row with 12 column C1...C12
+#### Adding a row with 12 column C1...C12 <a name="Adding_a_row_with_12_column"></a>
 ```
 <div class="row">
     <div class="col-1">C1</div>
@@ -96,14 +136,14 @@ The important thing here already
 </div>
 ```
 
-#### Adding one row with 2 columns (one column with 4 spaces an columns with 8 spaces)
+#### Adding one row with 2 columns (one column with 4 spaces an columns with 8 spaces) <a name="Adding_a_row_with_2_columns"></a>
 ```
 <div class="row">
     <div class="col-4">C1</div>
     <div class="col-8">C2</div>
 </div>
 ```
-#### Create an example with
+#### Create an example with <a name="Create_an_example"></a>
 - col-1 (1 space - left column with github, linkedin)
 - col-11 (11 space - for two rows and two columns for 4 Plotly plots)
 
@@ -181,11 +221,11 @@ The important thing here already
 - use ```class="img-fluid"``` to enlarge and shrink images automatically depending on screen size
 - use ```class="text-muted"``` to change text color to gray
 
-#### Image of the web Layout
+#### Image of the web Layout <a name="Image_of_the_web_Layout"></a>
 
 ![web_layout][image1]
 
-## Add a navigation bar (example)
+## Add a navigation bar (example) <a name="Add_a_navigation_bar"></a>
 ```
 <!--navbar links-->     
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -210,14 +250,14 @@ The important thing here already
 </nav>
 ```
 
-#### Style color of navbar
+#### Style color of navbar <a name="Style_color_of_navbar"></a>
 ```
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 ```
   - navbar-dark (or e.g. navbar-light)
   - bg-dark (or e.g. bg-light)
 
-#### Add navbar items via
+#### Add navbar items via <a name="Add_navbar_items"></a>
 
 ```
 <li class="nav-item">
@@ -225,17 +265,17 @@ The important thing here already
 </li>
 ```
 
-#### Align the navbar to the right screen side
+#### Align the navbar to the right screen side <a name="Align_the_navbar"></a>
 ```
 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 ```
 use ml-auto to auto align the navbar to the right side
 
-#### Image of the navbar
+#### Image of the navbar <a name="Image_of_the_navbar"></a>
 ![navbar][image2]
 
 
-## How to use jQuery
+## How to use jQuery <a name="How_to_use_jQuery"></a>
 This is just a simple introduction.
 
 Jquery is a JavaScript library that makes developing the front-end easier. The Bootstrap library depends on jQuery.
@@ -257,7 +297,7 @@ $(document).ready(function(){
 - The ready() function waits for the html document to load. Then there is another function being passed into the ready function. This section function adds an on-click event to an image tag. Then there's another function passed into the click() function, which changes the h1 text.
 
 
-## Integrate Plotly plots
+## Integrate Plotly plots <a name="Integrate_Plotly_plots"></a>
 [Plotly](), although a private company, provides open source libraries for both JavaScript and Python.
 
 Here are a few links to some helpful parts of the plotly documentation:
@@ -265,7 +305,7 @@ Here are a few links to some helpful parts of the plotly documentation:
 - [getting started](https://plot.ly/javascript/getting-started/)
 - [linking to the plotly library](https://plot.ly/javascript/getting-started/#plotlyjs-cdn)
 
-#### How to use it?
+#### How to use it? <a name="How_to_use_it"></a>
 1. Set a link the javascript source file in the header section of the html file:
 ```
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -475,22 +515,22 @@ Here are a few links to some helpful parts of the plotly documentation:
   figures.append(dict(data=graph_two, layout=layout_two))
   ```
 
-#### Other options
+#### Other options <a name="Other_options"></a>
 - [d3.js](https://d3js.org/) is one of the most popular (and complex!) javascript data visualization libraries. This library is still actively being developed.
 - Other options include [chart.js](https://classroom.udacity.com/nanodegrees/nd025/parts/0469f04b-1440-4b2c-9f69-8882d6ec436b/modules/237f5e87-7a8e-49d1-aab9-241006ce715e/lessons/3737ebcb-984e-4959-bf2a-95fe13de4916/concepts/ww.chartjs.org/), [Google Charts](https://developers.google.com/chart/), and [nvd3.js](nvd3.org/), which is built on top of d3.js
 
-## Flask
+## Flask <a name="Flask"></a>
 
 [Flask](flask.pocoo.org/) - a web framework takes care of all the routing needed to organize a web page
 
-#### File top start the web app - worldbank.py file
+#### File top start the web app - worldbank.py file <a name="File_top_start"></a>
 This file starts the web app server
 ```
 from worldbankapp import app
 app.run(host='0.0.0.0', port=3001, debug=True)
 ```
 
-#### The worldbankapp folder
+#### The worldbankapp folder <a name="The_worldbankapp_folder"></a>
 - Here is the template folder with the ```ìndex.html``` file inside
 - The ```__init__.py```
   ```
@@ -504,7 +544,7 @@ app.run(host='0.0.0.0', port=3001, debug=True)
 
 - the routes.py file to create a new page
 
-#### Create a new page
+#### Create a new page <a name="Create_a_new_page"></a>
 To create a new web page, you first need to specify the route in the routes.py as well as the name of the html template.
 
 ```
@@ -513,7 +553,7 @@ def render_the_route():
     return render_template('new_route.html')
 ```
 
-#### To start the server type in the Terminal
+#### To start the server type in the Terminal <a name="start_the_server"></a>
 
 ```
 python worldbank.py
@@ -538,13 +578,13 @@ The web page is located at
 http://WORKSPACEID-3001.WORKSPACEDOMAIN
 ```
 
-## How does Panda, Plotly, Flask and HTML work together?
-1. Plotly installation
+## How does Panda, Plotly, Flask and HTML work together? <a name="work_together"></a>
+1. Plotly installation <a name="Plotly_installation"></a>
   ```
   pip install Plotly
   ```
 
-#### wrangle_data.py
+#### wrangle_data.py <a name="wrangle_data"></a>
 
 2. The data is loaded in ```/wrangling_scripts/wrangle_data.py``` file via
   ```
@@ -552,7 +592,7 @@ http://WORKSPACEID-3001.WORKSPACEDOMAIN
   ```
 3. The data has to be cleaned there
 
-#### routes.py
+#### routes.py <a name="routes"></a>
 
 4. Import Plotly in ```routes.py```
   ```
@@ -593,7 +633,7 @@ http://WORKSPACEID-3001.WORKSPACEDOMAIN
                             figuresJSON=figuresJSON)
   ```
 
-#### index.html
+#### index.html <a name="index"></a>
 12. In the index.html file, the ```data_set``` variable and ```figuresJSON``` can be accessed by using a template engine called [Jinja](https://jinja.palletsprojects.com/en/2.11.x/):
   ```
   <p>{{ data_set }}</p>
@@ -624,13 +664,13 @@ http://WORKSPACEID-3001.WORKSPACEDOMAIN
   </script>
   ```
 
-## Setup Instructions
+## Setup Instructions <a name="Setup_Instructions"></a>
 
 The following is a brief set of instructions on setting up a cloned repository.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites: Installation of Python via Anaconda and Command Line Interaface
+### Prerequisites: Installation of Python via Anaconda and Command Line Interaface <a name="Prerequisites"></a>
 - Install [Anaconda](https://www.anaconda.com/distribution/). Install Python 3.7 - 64 Bit
 - If you need a good Command Line Interface (CLI) under Windowsa you could use [git](https://git-scm.com/). Under Mac OS use the pre-installed Terminal.
 
@@ -645,7 +685,7 @@ $ conda upgrade --all
 $ export PATH="/path/to/anaconda/bin:$PATH"
 ```
 
-### Clone the project
+### Clone the project <a name="Clone_the_project"></a>
 - Open your Command Line Interface
 - Change Directory to your project older, e.g. `cd my_github_projects`
 - Clone the Github Project inside this folder with Git Bash (Terminal) via:
