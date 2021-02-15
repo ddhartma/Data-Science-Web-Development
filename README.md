@@ -50,6 +50,7 @@ Here are some great Bootstrap links to get started:
 - [Images](https://getbootstrap.com/docs/4.0/content/images/)
 - [Navigation Bars](https://getbootstrap.com/docs/4.0/components/navbar/)
 - [Font Colors](https://getbootstrap.com/docs/4.0/utilities/colors/)  
+- [Slider](https://seiyria.com/bootstrap-slider/)
 
 
 ## The two project folders in this repo <a name="The_two_project_folders_in_this_repo"></a>
